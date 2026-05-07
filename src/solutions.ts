@@ -39,3 +39,34 @@ const getProperty = <T>(value: T) => {
   return [value];
 };
 console.log(getProperty(user.name));
+
+// solution 5
+interface IBook {
+  title: string;
+  author: string;
+  publishedYear: number;
+  isRead?: boolean;
+}
+// not included in true or false in direct interface so included extends
+interface ReadBook extends IBook {
+  isRead?: boolean;
+}
+
+const toggleReadStatus = (book: IBook, status: boolean = true): ReadBook => {
+  return {
+    ...book,
+    isRead: status,
+  };
+};
+
+const inputBook: IBook = {
+  title: "Next Level Training book",
+  author: "Ranjit",
+  publishedYear: 2026,
+};
+// default isRead is true print now and others
+// console.log(toggleReadStatus(inputBook));
+// input false status
+console.log(toggleReadStatus(inputBook, false));
+// default true result
+// console.log("default true result", toggleReadStatus(inputBook));
