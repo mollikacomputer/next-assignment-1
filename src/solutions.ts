@@ -96,3 +96,17 @@ class Student extends Person {
 const student = new Student("Ranjt Kumar Mandal", 45, "A");
 
 console.log(student.getDetails());
+
+// solution 7
+
+const getIntersection = (array1: number[], array2: number[]): number[] => {
+  const numberOfSet2 = new Set(array2);
+  return array1.filter((num) => numberOfSet2.has(num));
+};
+
+// output
+const result = getIntersection(
+  [1, 3, 5, 8, 9, 12, 16, 15],
+  [16, 5, 9, 20, 30, 35, 12, 40],
+);
+console.log(result);
