@@ -31,3 +31,11 @@ const checkType = (StringOrNumber: number | string) => {
   }
 };
 console.log(checkType("Mollika Computer"));
+
+// solution 4
+
+const user = { id: 1, name: "John Doe", age: 21 };
+const getProperty = <T>(value: T) => {
+  return [value];
+};
+console.log(getProperty(user.name));
