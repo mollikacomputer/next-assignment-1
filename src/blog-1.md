@@ -1,3 +1,4 @@
+#typescript any type
 typescript any type এ কখনো আটকয় না। আমরা ভুল টাইপের তথ্য দিলে আটকানোর কথা। তাই আমরা typescript ব্যবহার করি। এখানে তা হয় না তাই এটা ব্যবহার না করাই ভাল।
 Example:
 let value: any = "Hello";
