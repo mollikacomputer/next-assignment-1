@@ -21,3 +21,13 @@ const reverseString = (str: string): string => {
 };
 
 console.log(reverseString("Ranjit Kumar Mandal"));
+
+// solution 3
+const checkType = (StringOrNumber: number | string) => {
+  if (typeof StringOrNumber === "number") {
+    return "number";
+  } else if (typeof StringOrNumber === "string") {
+    return "string";
+  }
+};
+console.log(checkType("Mollika Computer"));
