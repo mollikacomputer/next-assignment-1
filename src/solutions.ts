@@ -70,3 +70,29 @@ const inputBook: IBook = {
 console.log(toggleReadStatus(inputBook, false));
 // default true result
 // console.log("default true result", toggleReadStatus(inputBook));
+
+// solution 6
+
+class Person {
+  name: string;
+  age: number;
+  constructor(name: string, age: number) {
+    this.name = name;
+    this.age = age;
+  }
+}
+
+class Student extends Person {
+  grade: string;
+  constructor(name: string, age: number, grade: string) {
+    super(name, age);
+    this.grade = grade;
+  }
+  // function method
+  getDetails(): string {
+    return `Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}`;
+  }
+}
+const student = new Student("Ranjt Kumar Mandal", 45, "A");
+
+console.log(student.getDetails());
