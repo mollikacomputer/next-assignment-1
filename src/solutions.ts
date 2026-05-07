@@ -3,13 +3,6 @@ const filterEvenNumbers = (numbers: number[]): number[] => {
   const result = numbers.filter((num) => num % 2 === 0);
   return result;
 };
-// check result 1 way
-const evenNumber = filterEvenNumbers([101, 100, 105, 1010, 112, 113, 114, 116]);
-console.log(evenNumber);
-// another way to get result
-// console.log(filterEvenNumbers([101, 100, 105, 1010, 112, 113, 114, 116]));
-
-// solution 2
 
 const reverseString = (str: string): string => {
   const letterSplit = str.split("");
@@ -20,8 +13,6 @@ const reverseString = (str: string): string => {
   return result;
 };
 
-console.log(reverseString("Ranjit Kumar Mandal"));
-
 // solution 3
 const checkType = (StringOrNumber: number | string) => {
   if (typeof StringOrNumber === "number") {
@@ -30,7 +21,6 @@ const checkType = (StringOrNumber: number | string) => {
     return "string";
   }
 };
-console.log(checkType("Mollika Computer"));
 
 // solution 4
 
@@ -38,7 +28,6 @@ const user = { id: 1, name: "John Doe", age: 21 };
 const getProperty = <T>(value: T) => {
   return [value];
 };
-console.log(getProperty(user.name));
 
 // solution 5
 interface IBook {
@@ -64,12 +53,6 @@ const inputBook: IBook = {
   author: "Ranjit",
   publishedYear: 2026,
 };
-// default isRead is true print now and others
-// console.log(toggleReadStatus(inputBook));
-// input false status
-console.log(toggleReadStatus(inputBook, false));
-// default true result
-// console.log("default true result", toggleReadStatus(inputBook));
 
 // solution 6
 
@@ -93,9 +76,6 @@ class Student extends Person {
     return `Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}`;
   }
 }
-const student = new Student("Ranjt Kumar Mandal", 45, "A");
-
-console.log(student.getDetails());
 
 // solution 7
 
@@ -109,4 +89,3 @@ const result = getIntersection(
   [1, 3, 5, 8, 9, 12, 16, 15],
   [16, 5, 9, 20, 30, 35, 12, 40],
 );
-console.log(result);
